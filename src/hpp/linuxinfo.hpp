@@ -1,11 +1,12 @@
 // class LinuxInfo: singleton to pull PC data
+#include <string>
 
 class LinuxInfo {
 
 private:
 	static LinuxInfo* _linuxInfo; // singleton
 
-	string _cpuName;
+	std::string _cpuName;
 	int _cpuCores;
 	int _cpuThreads;
 
@@ -17,7 +18,7 @@ private:
 public:
 	static LinuxInfo* get();
 
-	string getCpuName();
+	std::string getCpuName();
 	int getCpuCores();
 	int getCpuThreads();
 
